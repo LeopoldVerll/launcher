@@ -1,0 +1,14 @@
+# Игнорировать виртуальное окружение
+venv/
+
+# Игнорировать содержимое папки backgrounds
+backgrounds/*
+
+# Игнорировать содержимое папки library
+library/*
+
+build/
+
+invalid sessions/
+
+dist/
