@@ -94,7 +94,7 @@ class FolderDialog(QDialog):
         self.init_ui()
 
     def init_ui(self):
-        self.setWindowTitle("Select Executable")
+        self.setWindowTitle("Лаунчер 0.1.1")
         self.setFixedSize(400, 300)
 
         layout = QVBoxLayout()
