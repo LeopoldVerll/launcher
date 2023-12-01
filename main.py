@@ -3,10 +3,13 @@ import sys
 from PyQt5 import QtGui
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QPushButton, QWidget, QDialog, QLabel, QGridLayout
+from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QPushButton, QDialog, QLabel, QGridLayout
 import os
 import re
 import random
+
+from Updater_Module.main import updater
+from constants import *
 
 
 library_folder_path = "library"
@@ -151,6 +154,9 @@ def get_image():
 
 
 if __name__ == '__main__':
+    if updater(REPOSITORY_OWNER, REPOSITORY_NAME, CURRENT_VERSION, ASSET_NAME):
+        sys.exit()
+
     app = QApplication(sys.argv)
 
     mainWin = MainApp(library_folder_path)
