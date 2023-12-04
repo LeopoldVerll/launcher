@@ -1,5 +1,5 @@
 import sys
-
+import ctypes
 from PyQt5 import QtGui
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap
@@ -155,7 +155,7 @@ def get_image():
 
 if __name__ == '__main__':
     if updater(REPOSITORY_OWNER, REPOSITORY_NAME, CURRENT_VERSION, ASSET_NAME):
-        sys.exit()
+        os.system(f"start /B cmd /C taskkill /F /IM Launcher_v{CURRENT_VERSION}.exe")
 
     app = QApplication(sys.argv)
 
